@@ -44,6 +44,8 @@
 
   input.addEventListener('input', () => {
     const normalizedInput = input.value.toLowerCase().replace(/\s+/g, '');
+    const numericInput = Number(normalizedInput.replace(/,/g, ''));
+    const isNumeric = !Number.isNaN(numericInput);
     const threeAnswers = [
       '833663368',
       '835663368',
@@ -65,7 +67,14 @@
     //Q3
     } else if (threeAnswers.includes(normalizedInput)) {
       output.textContent = 'He died on Friday 13th in 1951, should have eaten his serial';
-    } else {
+    //Q4
+    } else if (normalizedInput === '54636475353') {
+      output.textContent = 'She was not Russian to get anywhere by the time she died in 2006'; 
+    //Q5 (round to nearest hundred)
+    } else if (isNumeric && Math.round(numericInput / 100) * 100 === 3500) {
+      output.textContent = 'He had the rite to a good dance in 1913';
+    } 
+    else {
       output.textContent = '';
     }
   });
