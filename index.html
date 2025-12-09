@@ -44,14 +44,29 @@
 
   input.addEventListener('input', () => {
     const normalizedInput = input.value.toLowerCase().replace(/\s+/g, '');
-    if (normalizedInput === '1685') {
+    const threeAnswers = [
+      '833663368',
+      '835663368',
+      '836663368',
+      '835633368',
+      '836633368',
+      '835665368',
+      '835666368',
+      '833633368',
+      '833665368',
+      '833666368'
+    ];
+    if (threeAnswers.includes(normalizedInput)) {
       output.textContent = 'Dominant';
     //Q1
     } else if (normalizedInput === 'cc#ebf#g#bb') {
       output.textContent = 'There was no longer a man in the mirror in 2007';
     //Q2
-    } else if (normalizedInput === 'cc#ebf#g#bb') {
-      output.textContent = 'There was no longer a man in the mirror in 2007';
+    } else if (normalizedInput === 'f#afed#c#dim') {
+      output.textContent = 'He was born in 1881 and Hungary to make music';
+    //Q3
+    } else if (normalizedInput === 's') {
+      output.textContent = 'He died on Friday 13th in 1951, should have eaten his serial';
     } else {
       output.textContent = '';
     }
