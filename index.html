@@ -13,7 +13,7 @@
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #a2c4fc, #ffffff);
+    background: linear-gradient(to bottom, #26af04, #df0606);
     text-align: center;
   }
   input[type="text"] {
@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<input type="text" id="numberInput" placeholder="Enter a number" />
+<input type="text" id="numberInput" placeholder="Enter an answer" />
 <div id="output"></div>
 
 <script>
@@ -60,30 +60,30 @@
     ];
     //Q1
     if (normalizedInput === 'cc#ebf#g#bb') {
-      output.textContent = 'There was no longer a man in the mirror in 2007';
+      output.textContent = '1. There was no longer a man in the mirror in 2007';
     //Q2
     } else if (normalizedInput === 'f#afed#c#dim') {
-      output.textContent = 'He was born in 1881 and Hungary to make music';
+      output.textContent = '2. He was born in 1881 and Hungary to make music';
     //Q3
     } else if (threeAnswers.includes(normalizedInput)) {
-      output.textContent = 'He died on Friday 13th in 1951, should have eaten his serial';
+      output.textContent = '3. He died on Friday 13th in 1951, should have eaten his serial';
     //Q4
     } else if (normalizedInput === '54636475353') {
-      output.textContent = 'She was not Russian to get anywhere by the time she died in 2006'; 
+      output.textContent = '4. She was not Russian to get anywhere by the time she died in 2006'; 
     //Q5 (round to nearest hundred)
     } else if (isNumeric && Math.round(numericInput / 100) * 100 === 3500) {
-      output.textContent = 'He had the rite to a good dance in 1913';
+      output.textContent = '5. He had the rite to a good dance in 1913';
     // Q6
     } else if (normalizedInput === '11b4652b51') {
-      output.textContent = 'You can not tell anyone but he worked in Hamburg'; 
+      output.textContent = '6. You can not tell anyone but he worked in Hamburg'; 
     // Q7
     } else if (normalizedInput === 'GD104') {
-      output.textContent = 'He loved quarter-tones so much he wrote le book on it in 1932'; 
+      output.textContent = '7. He loved quarter-tones so much he wrote le book on it in 1932'; 
     // Q8
     } else if (normalizedInput === 'GAD') {
-      output.textContent = 'Prolation is the name of the game, he wrote it in 1400s';  
+      output.textContent = '8. Prolation is the name of the game, he wrote it in 1400s';  
     } else {
-      output.textContent = '';
+      output.textContent = 'Sorry that is not correct, try again!';
     }
   });
 </script>
