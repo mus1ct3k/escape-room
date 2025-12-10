@@ -73,8 +73,16 @@
     //Q5 (round to nearest hundred)
     } else if (isNumeric && Math.round(numericInput / 100) * 100 === 3500) {
       output.textContent = 'He had the rite to a good dance in 1913';
-    } 
-    else {
+    // Q6
+    } else if (normalizedInput === '11b4652b51') {
+      output.textContent = 'You can not tell anyone but he worked in Hamburg'; 
+    // Q7
+    } else if (normalizedInput === 'GD104') {
+      output.textContent = 'He loved quarter-tones so much he wrote le book on it in 1932'; 
+    // Q8
+    } else if (normalizedInput === 'GAD') {
+      output.textContent = 'Prolation is the name of the game, he wrote it in 1400s';  
+    } else {
       output.textContent = '';
     }
   });
